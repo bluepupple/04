@@ -1,15 +1,20 @@
-#include <stdio.h> 
- 
-int main(void)  
-{ 
-    int year; 
- 
-    printf("Input the year :"); 
-    scanf("%i", &year); 
- 
-    printf("Is the year %i a loap year? : %i\n",
-           year,
-           ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)); 
- 
-    return 0; 
+#include <stdio.h>
+
+int main(void)
+{
+    unsigned int x;
+    int b;
+
+    printf("input a number:");
+    scanf("%ui", &x);
+
+    for (b=0; x!= 0; x >>= 1)
+    {
+        if (x&1)
+            b++;
+    }
+
+    printf("The result is : %i\n", b);
+
+    return 0;
 }
