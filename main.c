@@ -1,20 +1,15 @@
-#include <stdio.h>
-
-int main(void) 
-{
-    int op1,op2;
-    int res;
-
-    //scanf
-    printf("input two integers:");
-    scanf("%i %i",&op1,&op2);
-
-
-   //printf
-    printf("%i + %i = %i\n", op1,op2,op1+op2);
-    printf("%i - %i = %i\n", op1,op2,op1-op2);
-    printf("%i * %i = %i\n", op1,op2,op1*op2);
-    printf("%i %% %i = %i\n", op1,op2,op1 % op2);
-
-    return 0;
+#include <stdio.h> 
+ 
+int main(void)  
+{ 
+    int year; 
+ 
+    printf("Input the year :"); 
+    scanf("%i", &year); 
+ 
+    printf("Is the year %i a loap year? : %i\n",
+           year,
+           ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)); 
+ 
+    return 0; 
 }
